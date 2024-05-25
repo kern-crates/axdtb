@@ -1,0 +1,10 @@
+{
+  "name": "axdtb",
+  "description": "A tool component for parsing dtb file.",
+  "authors": [{
+    "name": "Shi Lei",
+    "email": "shi_lei@massclouds.com"
+  }],
+  "keywords": ["dtb", "fdt"],
+  "repo": "shilei-massclouds/axdtb"
+}
