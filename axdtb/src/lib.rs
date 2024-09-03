@@ -126,3 +126,10 @@ impl From<str::Utf8Error> for DeviceTreeError {
         DeviceTreeError::Utf8Error
     }
 }
+
+pub fn parse<F>(dtb_va: usize, mut cb: F)
+where F: FnMut(String, usize, usize, Vec<(String, Vec<u8>)>)
+{
+    let dt = DeviceTree::init(dtb_va.into()).unwrap();
+    dt.parse(dt.off_struct, 0, 0, &mut cb).unwrap();
+}
